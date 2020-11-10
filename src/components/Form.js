@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from 'react';
 
 const Form = ({ handleSubmit, history }) => {
   const [searchEntry, setSearchEntry] = useState("");
@@ -6,6 +6,9 @@ const Form = ({ handleSubmit, history }) => {
   const updateSearchInput = e => {
     setSearchEntry(e.target.value);
   };
+  useEffect(() => {
+    if (searchEntry && !history.location.pathname.includes(searchEntry)) setSearchEntry('')
+  }, [history.location.pathname])
   return (
     <form
       className="search-form"
