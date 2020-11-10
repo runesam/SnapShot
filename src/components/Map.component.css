@@ -1,0 +1,28 @@
+.map-component-container {
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(186, 186, 186, 0.5);
+}
+.map-component-container > .map-wrapper {
+  width: 75%;
+  height: 75%;
+  overflow: hidden;
+  border-radius: 15px;
+}
+.map-component-container pre {
+  right: 0;
+  padding: 15px;
+  position: absolute;
+  background: #00f3ff;
+  text-align: initial;
+  border-radius: 15px;
+}
+
+/*# sourceMappingURL=Map.component.css.map */

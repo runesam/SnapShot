@@ -1,7 +1,7 @@
 import React from "react";
 
-const Image = ({ url, title }) => (
-  <li>
+const Image = ({ id, url, title, setShowLocation }) => (
+  <li onClick={() => setShowLocation(id)}>
     <img src={url} alt={title} />
   </li>
 );
